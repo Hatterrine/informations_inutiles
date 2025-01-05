@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link href="feuilledestyle.css" rel="stylesheet" type="text/css">
+		<title>accueil des informations inutiles</title>
+	</head>
+	<body>
+		<nav>
+			<ul id='choix'>
+				<li><a href="Index.html"> accueil</a></li>
+				<li><a href="page1.html"> des faits intéressants</a></li>
+				<li> <a href="page2.html"> les pépites du bac</a></li>
+				<li> <a href="page3.html"> Sur les jeux vidéo</a></li>
+				<li> <a href="pages4.html"> des lois insolites</a></li>
+				<li> <a href="page5.html"> Dans la vraie vie...</a></li>
+			</ul>
+		</nav>
+		<h1 id='Titre'> Les Informations inutiles. </h1>
+		<div class="slider">
+			<div class="slider-viewport">
+				<div id="img1">
+					<div id="img2">
+						<div id="img3">
+							<div id="img4">
+								<div id="img5">
+									<div class="slider-content">
+										<img alt="métal gear" src="metal_gear_acc.gif">
+										<img alt="hat kid qui danse" src="hatkid_acc.gif">
+										<img alt="venti qui danse" src="venti-dance_acc.gif">
+										<img alt="mario qui marche" src="mario_acc.gif">
+										<img alt="citation de Kamelott" src="citationkamelott_acc.jpg">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider-nav">
+				<a href="#img1"></a>
+				<a href="#img2"></a>
+				<a href="#img3"></a>
+				<a href="#img4"></a>
+				<a href="#img5"></a>
+			</div>
+		</div>
+		<script>
+			var z = new Image(); 
+			z.src = 'walle_acc.gif'; 
+			document.body.background=z.src; 
+		</script>
+		<script src="qcm.js"></script>
+		<input type="button" onclick="changeImage()" value="Changer le fond d'écran">		
+		<form name="quiz">
+			<span><b>Question 1 :Qu'est ce qui est petit et marron ? </b></span><br>
+			<div style="position:absolute;left:300px"><br>
+				<textarea name="t1" rows="4" cols="20" ></textarea>
+			</div><br>
+			<input type="radio" name="q1" value="r1">Une noix<br>
+			<input type="radio" name="q1" value="r2">Un lapin<br>
+			<input type="radio" name="q1" value="r3">Un marron se nommant Bernard; il s'est <br>noyé car il pensait qu'il poussait sur un noyer.<br>
+			<input type="radio" name="q1" value="r4">Un marron<br><br>
+			
+			<span><b>Question 2 : Pourquoi est-on sûr que le journal parlant de la première guerre mondiale écrit en 1919 n'a pas existé ?</b><br></span>
+				<div style="position:absolute;left:300px"><br>
+					<textarea name="t2" rows="4" cols="20" ></textarea>
+				</div><br>
+				<input type="radio" name="q2" value="r1">En fait, il existe.<br>
+				<input type="radio" name="q2" value="r2">Les dates ne corespondent pas<br>
+				<input type="radio" name="q2" value="r3">Les illuminatis nous ont mentis !!!<br>
+				<input type="radio" name="q2" value="r4">Cela s'appelait la grande guerre<br>
+				<br>
+				<span><b>Question 3 : Pourquoi le ciel est bleu ?</b><br></span>
+				<div style="position:absolute;left:300px"><br>
+					<textarea name="t3" rows="4" cols="20" ></textarea>
+				</div><br>
+				<input type="radio" name="q3" value="r1">Car il est bleu.<br>
+				<input type="radio" name="q3" value="r2">C'est à cause de la lumière du soleil<br>
+				<input type="radio" name="q3" value="r3">A cause des enfants de Fenrir.<br>
+				<input type="radio" name="q3" value="r4">A cause des pizzas.... <br>
+				<br>
+
+				<input type="button" value="Score" onClick="getScore(this.form)">
+				<input type="reset" value="RAZ"><p>
+				Score = <input type=text size=15 name="percentage"><br>
+				Réponses correctes :<br>
+				<textarea name="solutions" wrap="hard" rows="4" cols="40"></textarea>
+			</form>
+		<footer id="footer"> © Créer par Perrine Goget. <img alt="logo de validation en css et html" id="logo" src="validationcsshtml.png"></footer>
+	</body>
+	
+</html>

@@ -1,0 +1,331 @@
+/*************************************************************************************************/
+/*                                                                                               */
+/*  I)                                   Preparation du menu                                     */
+/*                                                                                               */
+/*************************************************************************************************/
+ /*                   le but de cette partie est de faire un menu horizontale                   */
+ /*                                                                                              */
+ /*je retire les marges inférieur et les points de la boite*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*dans la boite nav je définis sa largeur, sa position, la couleur de font, et la nombre de px par rapport au bord*/
+nav{
+    width: 100%;
+    margin: 0px auto 40px auto;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+}
+/*ici dans la balise ul situer dans nav je retire les types de style de la liste mis par défault*/
+nav ul{
+    list-style-type: none;
+}
+/*dans les balise li:
+		-avec le float je mets tout à gauche
+		- je divises chaque élément dans une boite (sachant que 100% divisé par le nombre d'éléments de menu)
+		- je centre le texte dans les éléments de menu 
+		-le font sera en blanc
+		-je mets le texte en gras*/
+nav li{
+    float: left;
+    width: 16.34%; 
+    text-align: center;
+	border: 2px blue solid;
+	background: white;
+	font-weight:bold ;  
+}
+
+/*ici j'évite que le menu n'ait une hauteur nulle*/
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*Ici dans la balise de nav a:
+			- j'indique que toute la surface sera cliquable
+			-la couleur sera noir
+			-j'évite le décalage des éléments sous le menu à cause de la bordure en :hover
+			-avec padding on agrandit le menu et espace la bordure du texte*/
+nav a{
+    display: block; 
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid transparent;
+    padding: 10px 0px;
+}
+/*si l'utilisateur met sa souris sur le bouton il s'illumine en orange*/
+nav a:hover{
+    color: orange;
+    border-bottom: 1px solid gold;
+}
+/*Je mets la taille que je veux a aux "boites"*/
+conteneur{
+  margin: 0px 19px;
+  height: 1500px;
+}
+/*************************************************************************************************/
+/*                                                                                               */
+/*  II)                   Préparation des titres et textes en général:                             */
+/*                                                                                               */
+/*************************************************************************************************/
+ /*                 le but de cette partie est que le texte soit agréable a lire                 */
+ /*                                                                                              */
+/*Je change la couleur de l'arrière plan
+NB: comme le validateur css ne voulais pas des autres paramètre je es ai mis dans la page d'acceuil html.*/
+body{
+		background-color :lightblue ;
+}
+
+/*****************************************************************************/
+/*Tout les titres seront en comic sans ms et je décide du dégrader de taille */
+/*****************************************************************************/
+h1{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 60px;
+  text-align:center;
+}
+
+h2{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 45px;
+  text-align:center;
+}
+h3{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 40px;
+  text-align:center;
+}
+h4{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 35px;
+  text-align:center;
+}
+h5{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 25px;
+  text-align:center;
+}
+h6{
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 20px;
+  text-align:center;
+}
+/*****************************************************************************/
+/*              Ici je modifie les paragraphes en général:                   */
+/*****************************************************************************/
+
+/*dans les paragraphes et les listes de la page 4 (classe dans page4) :
+			je le mets en bodoni MT 
+			si il ne trouve pas ce type de police alors on mets du Times new roman,
+			sinon on met du sérif. */
+p{
+	font-family: "Bodoni MT","Times New Roman",serif;  
+	font-size: 18px;
+	margin: 20px;
+	border: 20px transparent solid;
+	background-color: rgba(238,250,252,0.6) ;
+	background-size: 50%;
+}
+.page4{
+	font-family: "Bodoni MT","Times New Roman",serif; 
+	font-size: 18px;
+	margin: 20px;
+	border: 20px transparent solid;
+	background-color: rgba(238,250,252,0.6) ;
+	background-size: 50%;	
+}
+/*Je rends le footer lisible avec un background*/
+ #footer{
+	 
+	background-color: rgba(238,250,252,0.6) ;
+ }
+/*****************************************************************************/
+/*              Ici je modifie les listes de la page 2                       */
+/*****************************************************************************/
+details{
+	border: 20px transparent solid;
+	text-align:center ;
+	text-align: center;
+	font-size : 25px;
+	background-size: 60px;
+}
+
+summary{
+	font-size: 35px;
+	border: 20px transparent solid;
+	background-color: rgba(238,250,252,0.6)
+}
+
+.pepite{
+	font-style: italic;
+}
+/*Comme vu précedamment, j'ai ajouter un background mais comme cela pas beau sur la page 3 je modifie les couleur sur la page 2*/
+/*Pour cela je vais utiliser des class ainsi je peux mettre des couleurs difféentes.*/
+
+.pa{  
+background-color: rgba(248,149,149,0.7) ;
+}
+.pb{  
+background-color: rgba(250,178,139,0.7) ;
+}
+.pc{  
+background-color: rgba(250,220,139,0.7) ;
+}
+.pd{  
+background-color: rgba(219,255,172,0.7) ;
+}
+.pe{  
+background-color: rgba(172,255,214,0.7) ;
+}
+.pf{  
+background-color: rgba(238,250,252,0.7) ;
+}
+.pg{  
+background-color: rgba(172,215,255,0.7) ;
+}
+.ph{  
+background-color: rgba(172,172,255,0.7) ;
+}
+.pi{  
+background-color: rgba(192,172,255,0.7) ;
+}
+.pj{  
+background-color: rgba(216,172,255,0.7) ;
+}
+.pk{  
+background-color: rgba(241,183,255,0.7) ;
+}
+.pl{  
+background-color: rgba(255,162,237,0.7) ;
+}
+.pm{  
+background-color: rgba(253,168,213,0.7) ;
+}
+
+
+
+/*************************************************************************************************/
+/*                                                                                               */
+/*  III)                       Préparation des images sur le site:                               */
+/*                                                                                               */
+/*************************************************************************************************/
+ /*  Le but de cette partie est que les image soient bien positionner dans le site               */
+ /*                                                                                              */
+/*****************************************************************************/
+/*          Ici je mets les images dans des boite et je les positionnnes      */
+/*****************************************************************************/
+/*Je met les image dans une boite 
+  le définie la taille en largeur et longueur
+  dans la balise img le réduit le taille des images
+  J'avais mis certaines image dans la boite div afin de les centrées
+  Je modifie la position des images avec l'id et la class
+  pour le logo, il me suffit de réduire un peu sa taille*/
+.box {
+  
+  min-width: 0px;
+  max-width:3600px;
+  margin:0 auto;
+  
+}
+ 
+.img_p5{
+  width:20%;	
+  
+}
+img{
+  width: 30%;	
+}
+div {
+  text-align:center;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.page1{
+	width:20%;
+}
+#logo{
+	width:15%;
+}
+
+/*****************************************************************************/
+/*          Ici j'ajoute un slider sur le site pour aucune raison :)         */
+/*****************************************************************************/
+/*Ici chaque class se trouve dans une boite div et plus on avance plus les class sont présise. Vous pourrez voir dans la page d'accueil.*/
+/*Pour les élément de la class slider je redéfinit sa position sur la page*/
+.slider {
+  width: 400px;
+  margin: 30px auto;
+  position: relative;
+  
+  }
+/*Je modifie la taille*/
+.slider-viewport {
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+}
+/*J'alligne les éléments en collonne*/
+.slider-content {
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  
+}
+/*Je redimentionne les images afin qu'elles tiennnent dans le rectangle*/
+.slider-content img {
+  width: 400px;
+  height: 200px;
+}
+/*Je redéfinie la position sur la page*/
+.slider-nav {
+  position: absolute;
+  width: 100%;
+  bottom: -30px;
+  margin-top: 10px;
+  text-align: center;
+}
+/*Je définis les petits carré qui ammènerons vers les images; pour chaque élément de a elles sont dans une boite des carrés sera gris
+ et enfin je définis la taille */
+.slider-nav a {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3);
+          box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  background-color: #adafbc;
+  width: 15px;
+  height: 15px;
+  margin: 0 3px;
+}
+/*Je mets le hover pour afin que si la souris survolle les carrés alors celui-ci change de couleur pour du blanc*/
+.slider-nav a:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.8);
+          box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.8);
+}
+/*Pour target, cet élément permet d'assigner un attribut pour chaque image 
+et j'indique que ces images doivent être de la bonne taille dans la boîte, on notera que ce sont des multiple de 400*/
+#img2:target .slider-content {
+  -webkit-transform: translateX(-400px);
+          transform: translateX(-400px);
+}
+#img3:target .slider-content {
+  -webkit-transform: translateX(-800px);
+          transform: translateX(-800px);
+}
+#img4:target .slider-content {
+  -webkit-transform: translateX(-1200px);
+          transform: translateX(-1200px);
+}
+#img5:target .slider-content {
+  -webkit-transform: translateX(-1600px);
+          transform: translateX(-1600px);
+}
